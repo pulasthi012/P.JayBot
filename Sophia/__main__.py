@@ -76,15 +76,15 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = f"""
-𝐇𝐞𝐥𝐥𝐨, \n 𝗜'𝗺 𝗦𝗼𝗽𝗵𝗶𝗮 
-𝗜'𝗺 𝗛𝗲𝗿𝗲 𝘁𝗼 𝗵𝗲𝗹𝗽 𝘆𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽𝘀! 𝗛𝗶𝘁 /help [️️ ️](https://telegra.ph/file/583b241199a6c0c0fa38c.jpg)
-Project By @DihanOfficial ❤
+ʜᴇʟʟᴏ, \n ɪ'ᴍ ◢◤ᴘ. ᴊᴀʏ ᴀssɪsᴛᴀɴᴛ
+ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜʀ ɢʀᴏᴜᴘs! ʜɪᴛ /help [️️ ️](https://telegra.ph/file/943287cd4b30513d9b168.jpg)
+ᴘʀᴏᴊᴇᴄᴛ ʙʏ @PJ_00109 ❤
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕ Add Sophia to your Group ➕", url="t.me/Sophia?startgroup=true"),
+            text="➕ Add ◢◤ᴘ. ᴊᴀʏ ᴀssɪsᴛᴀɴᴛ to your Group ➕", url="t.me/PJay_AssistBot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="Source Code 🗒️", callback_data="source_"),
@@ -93,9 +93,9 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="🙋‍♀️ Sophia News", url=f"https://t.me/dihanofficial"),
+        InlineKeyboardButton(text="🙋‍♀️ ◢◤ᴘ. ᴊᴀʏ ᴀssɪsᴛᴀɴᴛ News", url=f"https://t.me/PJ_00109"),
         InlineKeyboardButton(
-            text="💬 Support Group", url=f"https://t.me/dihan_official"
+            text="💬 Support", url=f"https://t.me/PJ_00109"
         ),
     ],
     [
@@ -105,14 +105,14 @@ buttons = [
 
 
 HELP_STRINGS = """
-`Hi.. I'm` 𝗦𝗼𝗽𝗵𝗶𝗮 
+`Hi.. I'm` ◢◤ᴘ. ᴊᴀʏ ᴀssɪsᴛᴀɴᴛ
 Click On The Buttons Below To Get Documentation About Specific Modules..
-Powered by @dihanofficial 💓 [️️ ️](https://telegra.ph/file/583b241199a6c0c0fa38c.jpg) """
+Powered by @PJ_00109 💓 [️️ ️](https://telegra.ph/file/943287cd4b30513d9b168.jpg) """
 
 
 DONATE_STRING = """Hey, glad to hear you want to donate!
- You can support the project Of [Dihan Randila](t.me/dihanrandila) \
- Supporting isnt always financial! [Dihan Official](t.me/dihanofficial) \
+ You can support the project Of [◢◤ᴘ. ᴊᴀʏ](t.me/PJ_00109) \
+ Supporting isnt always financial! [◢◤ᴘ. ᴊᴀʏ](t.me/PJ_00109) \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
 IMPORTED = {}
@@ -126,7 +126,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("Sophia.modules." + module_name)
+    imported_module = importlib.import_module("◢◤ᴘ. ᴊᴀʏ ᴀssɪsᴛᴀɴᴛ.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -354,32 +354,32 @@ def help_button(update, context):
 
 
 @run_async
-def sophia_about_callback(update, context):
+def ◢◤ᴘ. ᴊᴀʏ_about_callback(update, context):
     query = update.callback_query
-    if query.data == "sophia_":
+    if query.data == "◢◤ᴘ. ᴊᴀʏ ᴀssɪsᴛᴀɴᴛ_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *Sophia*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *◢◤ᴘ. ᴊᴀʏ ᴀssɪsᴛᴀɴᴛ*, a powerful group management bot built to help you manage your group easily.
                  \n* I can restrict users.
                  \n* I can greet users with customizable welcome messages and even set a group's rules.
                  \n* I have an advanced anti-flood system.
                  \n* I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n* I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n* I check for admins' permissions before executing any command
-                 \n* Awesome Secret @DihanOfficial
-                 \n* Support Group @dihan_official
-                 \* Assistant @SophiaX_Support
+                 \n* Awesome Secret @PJ_00109
+                 \n* Support @PJ_00109
+                 \* Assistant @PJ_00109
                  \n\nIf you have any question about Sophia, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="sophia_back")
+                    InlineKeyboardButton(text="Back", callback_data="◢◤ᴘ. ᴊᴀʏ ᴀssɪsᴛᴀɴᴛ_back")
                  ]
                 ]
             ),
         )
-    elif query.data == "sophia_back":
+    elif query.data == "◢◤ᴘ. ᴊᴀʏ ᴀssɪsᴛᴀɴᴛ_back":
         query.message.edit_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -399,8 +399,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..😍 I'm *Sophia*
-                 \nHere is the [Source Code](https://github.com/dihanofficial/Sophia) .""",
+            text=""" Hi..😍 I'm *◢◤ᴘ. ᴊᴀʏ ᴀssɪsᴛᴀɴᴛ*
+                 \nHere is the [Source Code](https://github.com/pulasthi012/P.JayBot) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -695,10 +695,10 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I'm Online Now! My Updates @dihanofficial")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I'm Online Now! My Updates @PJ_00109")
         except Unauthorized:
             LOGGER.warning(
-                "Bot isnt able to send message to @dihan_official, go and check!"
+                "Bot isnt able to send message to @PJ_00109, go and check!"
             )
         except BadRequest as e:
             LOGGER.warning(e.message)
